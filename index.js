@@ -356,23 +356,15 @@ singleProdDetails("Titan III-C", TitanIIIC);
 singleProdDetails("Titan III-C MOL", TitanIIICMOL);
 singleProdDetails("Titan III-B Centaur", TitanIIIBCentaur);
 
-// const prodPrice = document.querySelector('.prod-price');
-// const selectedPrice = localStorage.getItem('selectedPrice');
-// // prodPrice.textContent = selectedPrice;
-
-// const prodImg = document.querySelector('.this-main-photo');
-// const selectedImg = localStorage.getItem('selectedImg');
-// prodImg.src = selectedImg;
-
 // add singleProdDetails
 function singleProdDetails(prodNameString, nameOfObj) {
   if (prodName) {
     if (prodName.textContent === prodNameString) {
       prodDetails.textContent = nameOfObj.description;
-      sphoto1.src = nameOfObj.smallPhoto1;
-      sphoto2.src = nameOfObj.smallPhoto2;
-      sphoto3.src = nameOfObj.smallPhoto3;
-      sphoto4.src = nameOfObj.smallPhoto4;
+      sphoto1.src = selectedImg;
+      sphoto2.src = "../RocketsP/Titan/Rocket2.png";
+      sphoto3.src = "../RocketsP/Titan/Rocket3.png";
+      sphoto4.src = "../RocketsP/Titan/Rocket4.png";
     }
   }
 }
@@ -501,20 +493,6 @@ updateCartDisplay();
 if (AllOrderedProds) {
   let remover = Array.from(document.querySelectorAll(".remover"));
 
-  // Remover
-  // remover.forEach((e, i) => {
-  //     e.addEventListener('click', () => {
-  //         e.parentElement.parentElement.remove();
-  //         console.log('index', i)
-  //         cartItems.splice(i, 1);
-  //         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  //         remover = Array.from(document.querySelectorAll('.remover'));
-  //         console.log(remover.length);
-  //         updateSbutotal();
-  //         updateFinalSubtotal();
-  //     })
-  // })
-
   function removerByClick() {
     remover = Array.from(document.querySelectorAll(".remover"));
     for (let i = remover.length - 1; i >= 0; i -= 1) {
@@ -599,9 +577,4 @@ if (video) {
     console.log("done");
     loadingMessage.style.display = "none";
   });
-
-  //   video.addEventListener("loadstart", () => {
-  //     console.log("22");
-  //     loadingMessage.style.display = "block";
-  //   });
 }
