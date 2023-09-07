@@ -231,6 +231,15 @@ li a i {
   left: 47%;
 }
 
+#loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  height: calc(100svh - 13vh);
+  text-align: center;
+}
+
 #featured-section,
 #new-arrivals,
 #banner2,
