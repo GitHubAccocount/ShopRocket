@@ -1301,4 +1301,9 @@ td {
   .cart-total-container {
     width: 100%;
   }
+
+  #cart {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
